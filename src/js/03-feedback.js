@@ -14,7 +14,10 @@ pushToTextarea();
 
 function onFormSubmit(e) {
   e.preventDefault();
-  console.log(formData);
+  console.log({
+    email: form.email.value,
+    message: form.message.value,
+  });
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
